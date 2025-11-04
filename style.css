@@ -163,6 +163,7 @@ footer
     background: #222;
     color:white;
     margin-top: 2rem;
+    font-size:0.95rem;
 }
 @media (max-width: 480px) {
   h1 {
