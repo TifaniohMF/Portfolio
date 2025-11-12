@@ -27,7 +27,7 @@ body
 }
 header
 {
-    background: url('images/header-math.jpg') no-repeat center fixed;
+    background-color:rgba(0,0,0,0.9);
     color:white;
     text-align: center;
     position:sticky;
