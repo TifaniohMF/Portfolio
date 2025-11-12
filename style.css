@@ -17,22 +17,24 @@ h2
 }
 body
 {
+    position:relative;
     background: url('images/math.jpg') no-repeat center center fixed;
     background-size:cover;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family:Roboto;
     line-height: 1.6;
     font-size:larger;
     color:#fff;
 }
 header
 {
-    background: #222;
+    background: url('images/header-math.jpg') no-repeat center fixed;
     color:white;
     text-align: center;
     padding: 1rem;
     top:0;
     z-index:10;
     box-shadow: 0 2px  5px rgba(0, 0, 0, 1);
+    position:sticky;
 }
 .header .conteneer
 {
