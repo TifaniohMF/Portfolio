@@ -4,101 +4,94 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css">
-        <title>Portfolio : Mathematique et informatique</title>
-         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <link "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        <title>Portfolio | Mathématique et informatique</title>
     </head>
     <body>
-        <header class="header">
-            <div class="conteneer">
-                <h1 class="logo">RANDRIANOELINA Tifanioh Mahefa Fandresentsoa</h1>
+    	<!-- ===== NAVIGATION ===== -->
                 <nav>
+                <div class="logo">RANDRIANOELINA Tifanioh Mahefa Fandresentsoa</div>
                     <ul>
-                        <li><a href="#about">A PROPOS</a></li>
-                        <li><a href="#project">PROJETS</a></li>
-                        <li><a href="#skills">COMPETENCE</a></li>
+                        <li><a href="#about">À PROPOS DE MOI</a></li>
+                        <li><a href="#competence">COMPÉTENCE</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
                     </ul>
                 </nav>
-            </div>
-        </header>
-        <section id="about">
-            <h2>A PROPOS :</h2>
+      
+      
+      	<!-- ==== HEADER ==== -->
+      	<header class="hero">
+      		<h1 class="fade-in">Salut, je suis <span>Tifanioh</span></h1>
+      		<p class="fade-in delay"> Mathématicien | Passionné de data & IA </p>
+      		<a href="#project" class="btn fade-in delay2">Voir mes projets</a>
+      	</header>
+      	
+      	<!-- ==== A PROPOS ==== -->
+        <section id="about" class="section">
+            <h2>A PROPOS DE MOI:</h2>
             <p>🎓 Je suis un étudiant en mathématique et informatique à l'université d'Antananarivo. <br>
             📝 Je suis passionné par la mathématique, l'algorithme, la donnée et l'intelligence artificielle.<br>
             💡 Depuis que je suis a l'université, j'ai décovert la merveille de la mathématique et de l'informatique. <br>
             Ces 2 domaines sont très vaste, mais je vais continuée a les étudiées même en apprénant l'informatique en autodidacte.</p>
         </section>
-        <section id="project">
-            <div class="contaneer">
+        
+        <!-- ==== PROJETS ==== -->
+        <section id="project" class="section dark">
                 <h2>MES PROJETS :</h2>
-                <p>Voici quelque projets que j'ai fait qui combine mes compétences en mathématique et informatique.</p>
-                <br>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>PROJETS</th>
-                            <th>DESCRIPTION</th>
-                            <th>LIEN</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Point, complexe et algèbre de quatérnion</td>
-                            <td>Cette projet se présente en 3 programmes principales programmée en langage C++ pour un calcul rapide.</td>
-                            <td>👉 <a href="https://github.com/TTifanioh/PointComplexeQuaternion.git" class="math">Voir sur github</a></td>
-                        </tr>
-                        <tr>
-                    	    <td>Résolution d'équation non linéaire</td>
-                    	    <td>Cette projet est un projet programmée en python et avec un outils jupyter.<br>Elle permet d'approximer une solution d'un équation non linéaire rapidement.</td>
-                    	    <td>👉 <a href="https://github.com/TTifanioh/ResolutionEquationNonLineaire.git" class="newton">Voir sur github</a></td>
-                    </tbody>
-            </table>
+                <p>Voici quelques projets que j'ai fait qui combine mes compétences en mathématique et informatique.</p>
+                <div class="projets-container">
+                	<div class="projet-card">
+                		<h3>Point, complexe et algèbre de quatérnion</h3>
+                		<p>Cette projet se présente en 3 programmes principales programmée en langage C++ pour un calcul rapide.</p>
+                		👉 <a href="https://github.com/TTifanioh/PointComplexeQuaternion.git" target="_blank">Voir sur Github </a>
+                	</div>
+                	<div class="projet-card">
+                		<h3>Résolution d'équation non linéaire</h3>
+                		<p>Cette projet est un projet programmée en python et avec un outils jupyter.<br>Elle permet d'approximer une solution d'un équation non linéaire rapidement.</p>
+                		👉 <a href="https://github.com/TTifanioh/ResolutionEquationNonLineaire.git" target="_blank">Voir sur github</a>
+                		
+                	</div>
         </section>
-        <section id="skills">
-            <div class="conteneer">
-                <h2>COMPETENCE :</h2>
-                <br>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Mathématique</th>
-                            <th>Informatique</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Analyse numérique</td>
-                            <td>Python (langage de programmation)</td>
-                        </tr>
-                        <tr>
-                            <td>Probabilité et statistique</td>
-                            <td>C\C++ (langage de programmation)</td>
-                        </tr>
-                        <tr>
-                            <td>Géometrie</td>
-                            <td>Html\Css</td>
-                        </tr>
-                        <tr>
-                            <td>Algèbre linéaire</td>
-                            <td>Git\Github</td>
-                        </tr>
-                        <tr>
-                            <td>Calcul numérique</td>
-                            <td>Jupyter</td>
-                        </tr>
-                        <tr>
-                                <td>Algorithme</td>
-                                <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-
+        
+        <!-- ==== COMPETENCE ==== -->    
+      <section id="competence" class="section">
+        <h2>COMPÉTENCES</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Mathématiques</h3>
+                <ul>
+                    <li>Analyse numérique</li>
+                    <li>Probabilité & Statistique</li>
+                    <li>Algèbre linéaire</li>
+                    <li>Algorithmique</li>
+                    <li>Calcul numérique</li>
+                </ul>
             </div>
-        </section>
+            <div class="skill-category">
+                <h3>Informatique</h3>
+                <ul>
+                    <li>Python & Jupyter</li>
+                    <li>C / C++</li>
+                    <li>HTML / CSS</li>
+                    <li>Git & Github</li>
+                    <li>Latex</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+        
+        
+        <!-- ==== CONTACT ==== -->
+        <section id="contact" class="section dark">
+        <h2>CONTACT</h2>
+        <div class="contact-container">
+            <a href="mailto:randrianoelinatifanioh@gmail.com" class="contact-item">📧 Email</a>
+            <a href="https://github.com/TTifanioh" target="_blank" class="contact-item">💻 Github</a>
+        </div>
+    </section>
         <footer>
-            <p><ion-icon name="logo-contact" class="contact"></io-icon>Contact : <a href="randrianoelinatifanioh@gmail.com" class="contact">randrianoelinatifanioh@gmail.com</a> | <ion-icon name="logo-github" class="github"></ion-icon>Github : <a href="https://github.com/TTifanioh" class="contact">TTifanioh</a></p>
-            <p>&copy; 2025 RANDRIANOELINA Tifanioh Mahefa F. Tous droits réservés</p>
-        </footero>
+   	        <p>&copy; 2025 RANDRIANOELINA Tifanioh Mahefa F - Tous droits réservés</p>
+        </footer>
     </body>
 </html>
 
