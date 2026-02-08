@@ -62,6 +62,14 @@ nav a:hover {
     color: var(--primary);
 }
 
+.logo{
+     font-size: 1.5rem;
+}
+
+.logo span {
+     color: var(--primary);
+}
+
 /* HERO SECTION */
 .hero {
     height: 80vh;
