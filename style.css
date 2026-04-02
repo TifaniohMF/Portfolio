@@ -7,6 +7,7 @@
 
 :root {
     --primary: #2563eb;
+    --primary-dark: #1d4ed8;
     --dark-bg: #0f172a;
     --light-bg: #1e1e2f;
     --text-color: #ffffff;
@@ -96,9 +97,16 @@ nav a:hover {
  }
  
 .hero-btns {
-        display: flex; 
-        gap: 15px; 
-         margin-top: 40px; 
+        display: flex;
+        gap: 15px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+        justify-content: center;
+}
+
+.hero-btns .btn {
+        min-width: 180px;
+        text-align: center;
 }
 
 .btn {
@@ -115,10 +123,16 @@ nav a:hover {
     border: 1px solid var(--primary);
     color: var(--primary);
 }
-.btn:hover { 
-         background: var(--primary-dark); 
-         transform: translateY(-2px); 
+.btn:hover {
+         background: var(--primary-dark);
          color: white;
+         transform: translateY(-2px);
+}
+
+.btn-outline:hover {
+         background: rgba(37, 99, 235, 0.12);
+         border-color: var(--primary);
+         color: var(--primary);
 }
 
 
