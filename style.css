@@ -5,6 +5,23 @@
     box-sizing: border-box;
 }
 
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--primary);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
 :root {
     --primary: #2563eb;
     --primary-dark: #1d4ed8;
@@ -164,6 +181,96 @@ nav a:hover {
     max-width: 100%;
 }
 
+/* METRICS GRID */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    text-align: center;
+}
+
+.metric-card {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #334155;
+    transition: 0.3s;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.1);
+}
+
+.metric-card h3 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+/* CV PREVIEW */
+.cv-container {
+    background: #1e293b;
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #334155;
+}
+
+.cv-summary h3 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.cv-section {
+    margin: 30px 0;
+}
+
+.cv-section h4 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.cv-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cv-section li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.cv-section li::before {
+    content: '•';
+    color: var(--primary);
+    position: absolute;
+    left: 0;
+}
+
+.skills-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background: var(--primary);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.cv-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
 /* PROJETS (GRID) */
 .projets-container {
     display: grid;
@@ -177,9 +284,18 @@ nav a:hover {
     border-radius: 15px;
     border: 1px solid #334155;
     transition: 0.3s;
+    cursor: pointer;
 }
 
-.projet-card:hover { transform: translateY(-10px); }
+.projet-card:hover { 
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.15);
+}
+
+.projet-card:focus-within {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.1);
+}
 
 .project-link {
     color: var(--primary);
@@ -202,8 +318,22 @@ nav a:hover {
     border-radius: 10px;
 }
 
-.skill-category h3 { color: var(--primary); margin-bottom: 15px; }
-.skill-category ul { list-style: none; }
+.skill-category ul li {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideInLeft 0.6s ease forwards;
+}
+
+.skill-category ul li:nth-child(1) { animation-delay: 0.1s; }
+.skill-category ul li:nth-child(2) { animation-delay: 0.2s; }
+.skill-category ul li:nth-child(3) { animation-delay: 0.3s; }
+.skill-category ul li:nth-child(4) { animation-delay: 0.4s; }
+.skill-category ul li:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
 
 /* CONTACT */
 .contact-container {
@@ -226,22 +356,121 @@ nav a:hover {
     animation: fadeIn 1s ease forwards;
 }
 
-footer { 
-    padding: 50px;
-    border-top: 1px solid rgba(255,255,255,0.05); 
-    text-align: center; 
-    color: var(--text-muted); 
-    font-size: 0.9rem; 
+.delay {
+    animation-delay: 0.3s;
 }
+
+.delay2 {
+    animation-delay: 0.6s;
+}
+
+.animate {
+    animation: slideUp 0.8s ease forwards;
+}
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
-    nav { flex-direction: column; gap: 15px; }
+    nav { 
+        flex-direction: column; 
+        gap: 15px; 
+        padding: 1rem 5%;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 15px;
+        margin-top: 15px;
+    }
+    
+    nav ul.active {
+        display: flex;
+    }
+    
+    .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--text-muted);
+        font-size: 1.5rem;
+        cursor: pointer;
+        position: absolute;
+        top: 1rem;
+        right: 5%;
+    }
+    
     .hero h1 { font-size: 2.2rem; }
+    .hero-btns { flex-direction: column; align-items: center; }
     .skills-grid { grid-template-columns: 1fr; }
+    .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+    .cv-container { padding: 20px; }
+    .cv-actions { flex-direction: column; align-items: center; }
     .section { padding: 50px 5%; }
+    .projets-container { grid-template-columns: 1fr; }
+    .contact-container { flex-direction: column; align-items: center; }
+}
+
+@media (max-width: 480px) {
+    .metrics-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 1.8rem; }
+    .section h2 { font-size: 1.5rem; }
+}
+
+/* ACCESSIBILITY */
+nav a:focus,
+.btn:focus,
+.contact-item:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.projet-card:focus-within {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* BACK TO TOP BUTTON */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: var(--primary-dark);
+    transform: scale(1.1);
+}
+
+.back-to-top:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
 }

@@ -6,26 +6,31 @@
         <meta name="description" content="Portfolio of Tifanioh MF - mathematics and computer science projects, AI, and downloadable CV.">
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+        <script src="script.js" defer></script>
         <title>Portfolio | Mathematics & Computer Science</title>
     </head>
     <body>
+    	<a href="#main-content" class="skip-link">Skip to main content</a>
     	<!-- ===== NAVIGATION ===== -->
                 <nav aria-label="Primary navigation">
                 <div class="logo"><span>RANDRIANOELINA</span> Tifanioh Mahefa Fandresentsoa</div>
-                    <ul>
-                        <li><a href="#about">ABOUT</a></li>
-                        <li><a href="#skills">SKILLS</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
+                    <ul role="menubar">
+                        <li role="none"><a href="#about" role="menuitem">ABOUT</a></li>
+                        <li role="none"><a href="#metrics" role="menuitem">METRICS</a></li>
+                        <li role="none"><a href="#project" role="menuitem">PROJECTS</a></li>
+                        <li role="none"><a href="#skills" role="menuitem">SKILLS</a></li>
+                        <li role="none"><a href="#contact" role="menuitem">CONTACT</a></li>
                     </ul>
                 </nav>
       
       
        	<!-- ==== HEADER ==== -->
-       	<header class="hero">
+       	<header class="hero" id="main-content">
        		<h1 class="fade-in">Hello, I'm <span>Tifanioh</span></h1>
 			<p class="fade-in delay">Mathematician | Passionate about data & AI</p>
               <div class="hero-btns fade-in delay2">
 			<a href="#project" class="btn">See my projects</a>
+               <a href="#cv-preview" class="btn btn-outline">View CV Preview</a>
                <a href="assets/CV_Tifanioh_Mahefa_Fandresentsoa_Randrianoelina.pdf" class="btn btn-outline" download>Download my CV (PDF)</a>
               </div>
             </header>
@@ -36,6 +41,75 @@
             <p>📝 Passionate about mathematics, data science, and artificial intelligence.</p>
             <p>💡 Since joining the university, I have discovered the depth of both fields. They are vast, and I continue learning through self-study in programming and data engineering.</p>
         </section>
+        
+        <!-- ==== METRICS ==== -->
+        <section id="metrics" class="section dark">
+            <h2>MY METRICS</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h3>5+</h3>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="metric-card">
+                    <h3>2+</h3>
+                    <p>Years of Study</p>
+                </div>
+                <div class="metric-card">
+                    <h3>10+</h3>
+                    <p>Skills Mastered</p>
+                </div>
+                <div class="metric-card">
+                    <h3>100%</h3>
+                    <p>Passion for Learning</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ==== CV PREVIEW ==== -->
+        <section id="cv-preview" class="section">
+            <h2>CV PREVIEW</h2>
+            <div class="cv-container">
+                <div class="cv-summary">
+                    <h3>Professional Summary</h3>
+                    <p>Mathematics and Computer Science student with a passion for data science and AI. Experienced in Python, C++, and web development. Strong foundation in numerical analysis and algorithms.</p>
+                    
+                    <div class="cv-section">
+                        <h4>Education</h4>
+                        <ul>
+                            <li><strong>University of Antananarivo</strong> - Mathematics and Computer Science (Current)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cv-section">
+                        <h4>Key Projects</h4>
+                        <ul>
+                            <li>Points, Complex Numbers and Quaternions (C++)</li>
+                            <li>Nonlinear Equations Solver (Python)</li>
+                            <li>Linear System Solver (Python)</li>
+                            <li>Math Archive Documentation Site</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cv-section">
+                        <h4>Technical Skills</h4>
+                        <div class="skills-preview">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">LaTeX</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Jupyter</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cv-actions">
+                    <a href="assets/CV_Tifanioh_Mahefa_Fandresentsoa_Randrianoelina.pdf" class="btn" download>Download Full CV</a>
+                    <a href="mailto:randrianoelinatifanioh@gmail.com" class="btn btn-outline">Contact Me</a>
+                </div>
+            </div>
+        </section>
+        
         <!-- ==== PROJECTS ==== -->
         <section id="project" class="section dark">
                 <h2>PROJECTS</h2>
