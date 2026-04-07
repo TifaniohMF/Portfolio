@@ -1,7 +1,7 @@
-// script.js - Interactions et animations pour le portfolio
+// script.js - Interactions and animations for the portfolio
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Animation au scroll
+    // Scroll animation
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -15,13 +15,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    // Observer les sections pour les animations
+    // Observe sections for animation
     document.querySelectorAll('.section').forEach(section => {
         observer.observe(section);
     });
 
-    // Animation des cartes de projet au hover
-    document.querySelectorAll('.projet-card').forEach(card => {
+    // Hover animations for project cards
+    document.querySelectorAll('.project-card').forEach(card => {
         card.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-15px) scale(1.02)';
         });
@@ -30,11 +30,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Bouton de retour en haut
+    // Back to top button
     const backToTopBtn = document.createElement('button');
     backToTopBtn.innerHTML = '↑';
     backToTopBtn.className = 'back-to-top';
-    backToTopBtn.setAttribute('aria-label', 'Retour en haut de la page');
+    backToTopBtn.setAttribute('aria-label', 'Back to top');
     document.body.appendChild(backToTopBtn);
 
     backToTopBtn.addEventListener('click', () => {
@@ -49,13 +49,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Menu mobile (hamburger)
+    // Mobile menu (hamburger)
     const nav = document.querySelector('nav');
     const navUl = document.querySelector('nav ul');
     const hamburger = document.createElement('button');
     hamburger.innerHTML = '☰';
     hamburger.className = 'hamburger';
-    hamburger.setAttribute('aria-label', 'Menu de navigation');
+    hamburger.setAttribute('aria-label', 'Navigation menu');
     hamburger.setAttribute('aria-expanded', 'false');
     nav.appendChild(hamburger);
 
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
         hamburger.setAttribute('aria-expanded', hamburger.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
     });
 
-    // Fermer le menu mobile en cliquant sur un lien
+    // Close the mobile menu on link click
     document.querySelectorAll('nav a').forEach(link => {
         link.addEventListener('click', () => {
             navUl.classList.remove('active');
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Animation des compétences (progress bars)
+    // Animate skill items
     const skillItems = document.querySelectorAll('.skill-category li');
     skillItems.forEach((item, index) => {
         item.style.animationDelay = `${index * 0.1}s`;
