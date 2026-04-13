@@ -1,13 +1,16 @@
 // script.js - Interactions and animations for the portfolio
 
+// Wait for the DOM to load before executing scripts
 document.addEventListener('DOMContentLoaded', function() {
     // Scroll animation
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.1, // Trigger when 10% of the section is visible
+        rootMargin: '0px 0px -50px 0px' // Offset the root margin
     };
 
+    // Create an IntersectionObserver to handle scroll animations
     const observer = new IntersectionObserver((entries) => {
+ // Add 'animate' class to sections when they come into view
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animate');
@@ -59,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
     hamburger.setAttribute('aria-expanded', 'false');
     nav.appendChild(hamburger);
 
+    // Toggle mobile menu on hamburger click
     hamburger.addEventListener('click', () => {
         navUl.classList.toggle('active');
         hamburger.setAttribute('aria-expanded', hamburger.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
