@@ -411,9 +411,42 @@ nav a:focus {
 .skill-category ul li:nth-child(4) { animation-delay: 0.34s; }
 .skill-category ul li:nth-child(5) { animation-delay: 0.42s; }
 
-@keyframes slideInLeft {
-    from { opacity: 0; transform: translateX(-18px); }
-    to { opacity: 1; transform: translateX(0); }
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.tool-card {
+    background: rgba(10, 17, 33, 0.92);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(57, 255, 202, 0.12);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(57, 255, 202, 0.2);
+}
+
+.tool-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 15px;
+}
+
+.tool-card h4 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.tool-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 .contact-container {
