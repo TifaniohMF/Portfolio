@@ -1,4 +1,25 @@
-// script.js - Interactions and animations for the portfolio
+// script.js - Advanced interactions and animations for the portfolio
+
+// Animation counter for metrics
+function animateCounter(element, target, duration = 2000) {
+    const isNumber = /^\d+/.test(target.toString());
+    if (!isNumber) return;
+    
+    let current = 0;
+    const increment = target / (duration / 16);
+    const startTime = Date.now();
+    
+    const counter = setInterval(() => {
+        const elapsed = Date.now() - startTime;
+        if (elapsed >= duration) {
+            element.textContent = target + '+';
+            clearInterval(counter);
+        } else {
+            current += increment;
+            element.textContent = Math.floor(current) + '+';
+        }
+    }, 16);
+}
 
 // Wait for the DOM to load before executing scripts
 document.addEventListener('DOMContentLoaded', function() {
@@ -8,29 +29,61 @@ document.addEventListener('DOMContentLoaded', function() {
         rootMargin: '0px 0px -50px 0px'
     };
 
-    // Create an IntersectionObserver to handle scroll animations
+    // Create an IntersectionObserver to handle scroll animations with stagger effect
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
+                setTimeout(() => {
+                    entry.target.classList.add('animate');
+                }, index * 40);
             }
         });
     }, observerOptions);
 
     // Observe sections, cards, and badges for animation
-    document.querySelectorAll('.section, .interest-card, .metric-card, .skill-badge').forEach(element => {
+    document.querySelectorAll('.section, .interest-card, .metric-card, .skill-badge, .project-card, .contact-card').forEach(element => {
         observer.observe(element);
     });
 
-    // Enhanced hover animations for project cards
+    // Animate metric counters when they come into view
+    const metricsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.hasAttribute('data-counted')) {
+                const h3 = entry.target.querySelector('h3');
+                if (h3) {
+                    const targetValue = parseInt(h3.textContent);
+                    animateCounter(h3, targetValue);
+                    entry.target.setAttribute('data-counted', 'true');
+                }
+            }
+        });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.metric-card').forEach(card => {
+        metricsObserver.observe(card);
+    });
+
+    // Enhanced hover animations for project cards with smooth parallax effect
     document.querySelectorAll('.project-card').forEach(card => {
         card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-12px) scale(1.02)';
-            this.style.boxShadow = '0 24px 48px rgba(57, 255, 202, 0.2)';
+            this.style.transform = 'translateY(-12px) scale(1.01)';
+            this.style.boxShadow = '0 20px 50px rgba(57, 255, 202, 0.18), 0 0 40px rgba(57, 255, 202, 0.08)';
         });
         card.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0) scale(1)';
             this.style.boxShadow = '0 8px 16px rgba(57, 255, 202, 0.06)';
+        });
+        
+        // Parallax effect on mouse move
+        card.addEventListener('mousemove', function(e) {
+            const rect = this.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width;
+            const y = (e.clientY - rect.top) / rect.height;
+            
+            const rotateX = (y - 0.5) * 3;
+            const rotateY = (x - 0.5) * 3;
+            
+            this.style.transform = `translateY(-12px) scale(1.01) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
         });
     });
 
@@ -44,13 +97,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Enhance contact cards with smooth animations
+    document.querySelectorAll('.contact-card').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-12px) scale(1.02)';
+        });
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+
     // Enhance skill badges with hover effects
     document.querySelectorAll('.skill-badge').forEach(badge => {
         badge.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.05)';
+            this.style.transform = 'translateY(-2px) scale(1.05)';
         });
         badge.addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1)';
+            this.style.transform = 'translateY(0) scale(1)';
         });
     });
 
@@ -120,40 +183,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Add counter animation for metrics
-    const counterElements = document.querySelectorAll('.metric-card h3');
-    const animateCounters = () => {
-        counterElements.forEach(element => {
-            const target = element.textContent;
-            const numeric = parseInt(target);
-            
-            if (!isNaN(numeric)) {
-                let current = 0;
-                const increment = Math.ceil(numeric / 30);
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= numeric) {
-                        element.textContent = target;
-                        clearInterval(timer);
-                    } else {
-                        element.textContent = current + (target.match(/[+%]/)?.[0] || '');
-                    }
-                }, 30);
+    // Add scroll-triggered animation class for custom animations
+    window.addEventListener('scroll', () => {
+        document.querySelectorAll('[data-scroll]').forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            if (elementTop < window.innerHeight * 0.8) {
+                element.classList.add('scroll-animate');
             }
         });
-    };
-
-    // Observe metrics section to trigger counter animation
-    const metricsSection = document.querySelector('#metrics');
-    if (metricsSection) {
-        const metricsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounters();
-                    metricsObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-        metricsObserver.observe(metricsSection);
-    }
+    });
 });
