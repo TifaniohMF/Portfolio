@@ -7,11 +7,14 @@ Live at: https://tifaniohmf.github.io/Portfolio/
 
 ```
 .
+├── assets
+│   └── favicon.svg.     site favicon
+├── docs
+│   └── README.md
 ├── index.html        Main page (markup + content structure)
 ├── style.css          Design system (CSS custom properties, light/dark theme)
 ├── script.js          Interactivity: theme toggle, project loading, animations
 ├── projects.json      Project data, loaded at runtime via fetch()
-├── favicon.svg        Site icon
 ├── manifest.json      Web app manifest (installable / PWA metadata)
 ├── robots.txt         Search engine crawling rules
 ├── sitemap.xml         Sitemap for search engines
