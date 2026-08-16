@@ -1,0 +1,34 @@
+[
+  {
+    "title": "SolveLinearSystem",
+    "equation": "A\\mathbf{x}=\\mathbf{b}",
+    "lang": "Python",
+    "description": "Solves linear systems of equations using several numerical methods: LU, QR and Cholesky decomposition.",
+    "tags": ["Linear algebra", "NumPy"],
+    "url": "https://github.com/TifaniohMF/SolveLinearSystem"
+  },
+  {
+    "title": "MathArchive",
+    "equation": "\\LaTeX",
+    "lang": "TeX",
+    "description": "A website gathering downloadable course notes and exercises written in LaTeX, built together with a friend.",
+    "tags": ["LaTeX", "Teaching"],
+    "url": "https://github.com/TifaniohMF/MathArchive"
+  },
+  {
+    "title": "Polynomial",
+    "equation": "P(x)=\\sum a_ix^i",
+    "lang": "Python",
+    "description": "Represents and computes with polynomials: operations, evaluation and simple symbolic manipulation.",
+    "tags": ["Data structures"],
+    "url": "https://github.com/TifaniohMF/Polynomial"
+  },
+  {
+    "title": "PointComplexeQuaternion",
+    "equation": "z=a+bi",
+    "lang": "C++",
+    "description": "A C++ implementation of a university exercise on complex numbers and quaternions.",
+    "tags": ["C++", "Algebraic structures"],
+    "url": "https://github.com/TifaniohMF/PointComplexeQuaternion"
+  }
+]

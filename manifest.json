@@ -1,0 +1,17 @@
+{
+  "name": "Tifanioh Randrianoelina — Portfolio",
+  "short_name": "T.R. Portfolio",
+  "description": "Applied Mathematics student portfolio — scientific computing, linear algebra, Python, LaTeX.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#f5f8fc",
+  "theme_color": "#0b2545",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

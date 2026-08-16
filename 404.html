@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Page not found</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Literata:wght@600&family=Inter:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<style>
+  .error-page{ min-height:80vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:40px 24px; }
+  .error-page .katex-eq{ font-size:2rem; margin-bottom:24px; color:var(--accent-2); }
+  .error-page h1{ font-family:var(--font-display); font-size:2.4rem; margin:0 0 12px; }
+  .error-page p{ color:var(--text-secondary); max-width:420px; margin:0 0 28px; }
+</style>
+</head>
+<body>
+<div class="grid-canvas" aria-hidden="true"></div>
+<div class="error-page">
+  <span class="katex-eq" data-katex="x \notin \text{dom}(f)"></span>
+  <h1>404 — Undefined</h1>
+  <p>This page isn't in the domain of this function. Let's go back to something well-defined.</p>
+  <a href="/Portfolio/" class="btn btn--primary">Back to home</a>
+</div>
+<script>
+  window.addEventListener('load', () => {
+    document.querySelectorAll('.katex-eq[data-katex]').forEach(el => {
+      katex.render(el.getAttribute('data-katex'), el, { throwOnError:false });
+    });
+  });
+</script>
+</body>
+</html>

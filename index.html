@@ -1,291 +1,227 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Portfolio of Tifanioh MF - mathematics and computer science projects, AI, and downloadable CV.">
-        <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-        <script src="script.js" defer></script>
-        <title>Portfolio | Mathematics & Computer Science</title>
-    </head>
-    <body>
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tifanioh Mahefa Fandresentsoa Randrianoelina — Applied Mathematics</title>
+<meta name="description" content="Portfolio of Tifanioh Randrianoelina, Applied Mathematics student at the University of Antananarivo. Scientific computing, linear algebra, Python, LaTeX.">
+<meta name="theme-color" content="#0b2545">
+<link rel="canonical" href="https://tifaniohmf.github.io/Portfolio/">
 
-        <nav aria-label="Primary navigation">
-            <div class="logo"><span>RANDRIANOELINA</span> Tifanioh Mahefa Fandresentsoa</div>
-            <ul role="menubar">
-                <li role="none"><a href="#about" role="menuitem">ABOUT</a></li>
-                <li role="none"><a href="#metrics" role="menuitem">METRICS</a></li>
-                <li role="none"><a href="#project" role="menuitem">PROJECTS</a></li>
-                <li role="none"><a href="#skills" role="menuitem">SKILLS</a></li>
-                <li role="none"><a href="#contact" role="menuitem">CONTACT</a></li>
-            </ul>
-        </nav>
+<!-- Open Graph / social preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tifanioh Randrianoelina — Applied Mathematics">
+<meta property="og:description" content="Applied Mathematics student building tools at the intersection of math and code: linear algebra solvers, numerical methods, and LaTeX course notes.">
+<meta property="og:url" content="https://tifaniohmf.github.io/Portfolio/">
+<meta property="og:image" content="assets/og-cover.svg">
+<meta name="twitter:card" content="summary_large_image">
 
-        <header class="hero" id="main-content">
-            <h1 class="fade-in">Hello, I'm <span>Tifanioh</span></h1>
-            <p class="fade-in delay">Mathematics & Computer Science Engineer crafting elegant solutions to complex problems.</p>
-            <p class="hero-subtitle fade-in delay">Specializing in algorithm design, numerical methods, and data analysis</p>
-            <p class="hero-tag fade-in delay2">Algorithmic Thinking • Computational Precision • Problem Solving</p>
-            <div class="hero-btns fade-in delay2">
-                <a href="#project" class="btn">View My Work</a>
-                <a href="#research" class="btn btn-outline">Research Interests</a>
-                <a href="assets/CV/CV_Tifanioh_Mahefa_Fandresentsoa_Randrianoelina_eng.pdf" class="btn btn-outline" download>Download CV (PDF)</a>
-            </div>
-        </header>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="manifest" href="manifest.json">
 
-        <section id="about" class="section">
-            <h2>ABOUT ME</h2>
-            <div class="about-content">
-                <p>🎓 <strong>Mathematics and Computer Science student</strong> at the University of Antananarivo with a deep passion for solving complex computational problems through mathematical elegance.</p>
-                <p>🧠 I explore the fascinating <strong>intersection of discrete mathematics, advanced algorithms, numerical methods, and machine learning</strong>, creating bridges between theoretical concepts and practical applications.</p>
-                <p>💡 My approach combines <strong>mathematical rigor</strong> with <strong>computational efficiency</strong>, designing algorithms and software architectures that are both intellectually satisfying and performant.</p>
-                <p>🔬 I'm driven by the challenge of <strong>transforming complex mathematical concepts into elegant, robust, and scalable software solutions</strong> that solve real-world problems.</p>
-                <p>📚 Constantly learning and exploring emerging technologies in AI, optimization, and scientific computing while maintaining strong fundamentals in theoretical computer science.</p>
-            </div>
-        </section>
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,500&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-        <section id="research" class="section">
-            <h2>RESEARCH & INTERESTS</h2>
-            <div class="interests-grid">
-                <div class="interest-card">
-                    <h3>🎯 Numerical Methods</h3>
-                    <p>Deep expertise in approximation algorithms, root finding, linear system solving, and computational stability analysis.</p>
-                </div>
-                <div class="interest-card">
-                    <h3>📊 Data Analysis</h3>
-                    <p>Statistical methods, probability theory, and data visualization for extracting insights from complex datasets.</p>
-                </div>
-                <div class="interest-card">
-                    <h3>🔗 Graph Algorithms</h3>
-                    <p>Discrete mathematics, algorithm optimization, and complexity analysis for network and tree problems.</p>
-                </div>
-                <div class="interest-card">
-                    <h3>🤖 Machine Learning</h3>
-                    <p>Linear algebra foundations, optimization algorithms, and practical implementation of learning models.</p>
-                </div>
-            </div>
-        </section>
+<!-- KaTeX for live-rendered formulas -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
 
-        <section id="metrics" class="section dark">
-            <h2>MY METRICS</h2>
-            <div class="metrics-grid">
-                <div class="metric-card">
-                    <h3>5+</h3>
-                    <p>Projects Completed</p>
-                </div>
-                <div class="metric-card">
-                    <h3>3+</h3>
-                    <p>Years of Study</p>
-                </div>
-                <div class="metric-card">
-                    <h3>8+</h3>
-                    <p>Algorithm Concepts</p>
-                </div>
-                <div class="metric-card">
-                    <h3>100%</h3>
-                    <p>Analytical Passion</p>
-                </div>
-            </div>
-        </section>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <section id="cv-preview" class="section">
-            <h2>CV PREVIEW</h2>
-            <div class="cv-container">
-                <div class="cv-summary">
-                    <h3>Professional Summary</h3>
-                    <p>Mathematics and Computer Science student focused on algorithm design, numerical simulation, and AI-driven data analysis. Skilled in Python, C++, and scientific computing.</p>
+<div class="grid-canvas" aria-hidden="true"></div>
 
-                    <div class="cv-section">
-                        <h4>Education</h4>
-                        <ul>
-                            <li><strong>University of Antananarivo</strong> - Mathematics and Computer Science (Current)</li>
-                        </ul>
-                    </div>
+<!-- ===== NAV ===== -->
+<header class="site-header">
+  <nav class="nav" aria-label="Primary">
+    <a href="#top" class="nav__brand">TMF.R<span class="nav__brand-dot">.</span></a>
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__menu" id="navMenu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact" class="nav__cta">Contact</a></li>
+      <li>
+        <button id="themeToggle" class="theme-toggle" aria-label="Switch to dark theme" aria-pressed="false">
+          <span class="theme-toggle__icon" aria-hidden="true"></span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</header>
 
-                    <div class="cv-section">
-                        <h4>Key Projects</h4>
-                        <ul>
-                            <li>Points, Complex Numbers and Quaternions (C++)</li>
-                            <li>Nonlinear Equations Solver (Python)</li>
-                            <li>Linear System Solver (Python)</li>
-                            <li>Math Archive Documentation Site</li>
-                        </ul>
-                    </div>
+<main id="top">
 
-                    <div class="cv-section">
-                        <h4>Technical Skills</h4>
-                        <div class="skills-preview">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">C++</span>
-                            <span class="skill-tag">HTML/CSS</span>
-                            <span class="skill-tag">LaTeX</span>
-                            <span class="skill-tag">Git</span>
-                            <span class="skill-tag">Jupyter</span>
-                        </div>
-                    </div>
-                </div>
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <p class="hero__eyebrow">Applied Mathematics Student</p>
+      <h1 class="hero__title">
+        Tifanioh Mahefa Fandresentsoa<br><span class="hero__title-accent">Randrianoelina</span>
+      </h1>
 
-                <div class="cv-actions">
-                    <a href="assets/CV/CV_Tifanioh_Mahefa_Fandresentsoa_Randrianoelina_eng.pdf" class="btn" download>Download Full CV</a>
-                    <a href="mailto:randrianoelinatifanioh@gmail.com" class="btn btn-outline">Contact Me</a>
-                </div>
-            </div>
-        </section>
+      <div class="hero__equation" aria-hidden="true">
+        <span class="katex-eq" data-katex="A\mathbf{x} = \mathbf{b}"></span>
+      </div>
+      <p class="hero__annot">→ solve, prove, code</p>
 
-        <section id="project" class="section dark">
-            <h2>PROJECTS</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <span class="tag">Mathematics / C++</span>
-                    <h3>Point, Complex Numbers & Quaternions</h3>
-                    <p>A comprehensive C++ library implementing complex arithmetic, quaternion algebra, and advanced 3D rotations. Demonstrates mastery of computational abstract mathematical structures with optimized algorithms for high-performance computing and graphics applications.</p>
-                    <div class="tech-stack">
-                        <span>C++</span>
-                        <span>Algebra</span>
-                        <span>3D Graphics</span>
-                    </div>
-                    <a class="project-link" href="https://github.com/TifaniohMF/PointComplexeQuaternion.git" target="_blank" rel="noopener">→ View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <span class="tag">Numerical Analysis / Python</span>
-                    <h3>Nonlinear Equations Solver Pro</h3>
-                    <p>Advanced Jupyter notebook implementing state-of-the-art numerical methods including Newton-Raphson, Bisection, fixed point iteration, and hybrid approaches. Features comprehensive convergence analysis, error estimation, visualization of solution behavior, and comparative performance benchmarking.</p>
-                    <div class="tech-stack">
-                        <span>Python</span>
-                        <span>Jupyter</span>
-                        <span>NumPy/Matplotlib</span>
-                        <span>Scientific Computing</span>
-                    </div>
-                    <a class="project-link" href="https://github.com/TifaniohMF/ResolutionEquationNonLineaire.git" target="_blank" rel="noopener">→ View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <span class="tag">Linear Algebra / Python</span>
-                    <h3>Linear Systems & Matrix Decomposition</h3>
-                    <p>Efficient and numerically stable solver for linear systems using LU, QR, and Cholesky decompositions. Implements advanced computational techniques with thorough numerical stability analysis, computational complexity optimization, matrix factorization methods, and detailed mathematical documentation including proofs.</p>
-                    <div class="tech-stack">
-                        <span>Python</span>
-                        <span>Linear Algebra</span>
-                        <span>Numerical Methods</span>
-                        <span>LaTeX</span>
-                    </div>
-                    <a class="project-link" href="https://github.com/TifaniohMF/SolveLinearSystem.git" target="_blank" rel="noopener">→ View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <span class="tag">Symbolic Math / Python</span>
-                    <h3>Polynomial Operations Library</h3> 
-                    <p>Comprehensive Python library for polynomial representation, manipulation, and computation. Performs polynomial arithmetic operations, root finding with multiple algorithms, Lagrange interpolation, derivative and integral calculations with efficient algorithms, robust error handling, and comprehensive test coverage.</p>
-                    <div class="tech-stack">
-                        <span>Python</span>
-                        <span>Symbolic Math</span>
-                        <span>Algorithms</span>
-                        <span>Unit Testing</span>
-                    </div>
-                    <a class="project-link" href="https://github.com/TifaniohMF/Polynomial.git" target="_blank" rel="noopener">→ View on GitHub</a>
-                </div>
-            </div>
-        </section>
+      <p class="hero__desc">
+        Mathematics &amp; Computer Science student at the <strong>University of Antananarivo</strong>,
+        Madagascar. Passionate about scientific computing, algorithms, data and machine learning —
+        I turn mathematical ideas into code that actually runs.
+      </p>
 
-        <section id="skills" class="section">
-            <h2>SKILLS</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Mathematics</h3>
-                    <div class="skill-badges">
-                        <div class="skill-badge with-icon">
-                            <img src="assets/numerical-icon.svg" alt="Numerical Analysis" class="badge-icon">
-                            Numerical Analysis
-                        </div>
-                        <div class="skill-badge with-icon">
-                            <img src="assets/probability-icon.svg" alt="Probability & Statistics" class="badge-icon">
-                            Probability & Statistics
-                        </div>
-                        <div class="skill-badge with-icon">
-                            <img src="assets/linear-icon.svg" alt="Linear Algebra" class="badge-icon">
-                            Linear Algebra
-                        </div>
-                        <div class="skill-badge with-icon">
-                            <img src="assets/algorithms-icon.svg" alt="Algorithms" class="badge-icon">
-                            Algorithms
-                        </div>
-                        <div class="skill-badge with-icon">
-                            <img src="assets/discrete-icon.svg" alt="Discrete Mathematics" class="badge-icon">
-                            Discrete Mathematics
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Computer Science</h3>
-                    <div class="skill-badges">
-                        <div class="skill-badge with-icon">
-                            <img src="assets/python-icon.svg" alt="Python" class="badge-icon">
-                            Python & Jupyter
-                        </div>
-                        <div class="skill-badge with-icon">
-                            <img src="assets/cpp-icon.svg" alt="C++" class="badge-icon">
-                            C / C++
-                        </div>
-                        <div class="skill-badge with-icon">
-                            <img src="assets/html-icon.svg" alt="HTML" class="badge-icon">
-                            HTML / CSS
-                        </div>
-                        <div class="skill-badge with-icon">
-                            <img src="assets/git-icon.svg" alt="Git" class="badge-icon">
-                            Git & GitHub
-                        </div>
-                        <div class="skill-badge with-icon">
-                            <img src="assets/latex-icon.svg" alt="LaTeX" class="badge-icon">
-                            LaTeX
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">View my projects</a>
+        <a href="#contact" class="btn btn--ghost">Get in touch</a>
+      </div>
 
-        <section id="contact" class="section dark">
-            <h2>GET IN TOUCH</h2>
-            <div class="contact-wrapper">
-                <p class="contact-intro">I'm always open to interesting conversations and collaboration opportunities. Feel free to reach out!</p>
-                <div class="contact-methods">
-                    <a href="mailto:randrianoelinatifanioh@gmail.com" class="contact-card">
-                        <span class="contact-icon">✉️</span>
-                        <h4>Email</h4>
-                        <p>randrianoelinatifanioh@gmail.com</p>
-                        <span class="contact-cta">Send an email →</span>
-                    </a>
-                    <a href="https://github.com/TifaniohMF" target="_blank" rel="noopener" class="contact-card">
-                        <span class="contact-icon">🔗</span>
-                        <h4>GitHub</h4>
-                        <p>@TifaniohMF</p>
-                        <span class="contact-cta">View projects →</span>
-                    </a>
-                    <a href="assets/CV/CV_Tifanioh_Mahefa_Fandresentsoa_Randrianoelina_eng.pdf" download class="contact-card">
-                        <span class="contact-icon">📄</span>
-                        <h4>Resume</h4>
-                        <p>Download my full CV</p>
-                        <span class="contact-cta">Get PDF →</span>
-                    </a>
-                </div>
-            </div>
-        </section>
+      <div class="hero__links">
+        <a href="https://github.com/TifaniohMF" target="_blank" rel="noopener">GitHub</a>
+        <span class="dot">·</span>
+        <a href="https://www.linkedin.com/in/tifanioh-mahefa-fandresentsoa-randrianoelina-205747361" target="_blank" rel="noopener">LinkedIn</a>
+        <span class="dot">·</span>
+        <a href="mailto:randrianoelinatifanioh@gmail.com">Email</a>
+      </div>
+    </div>
+  </section>
 
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>TIFANIOH MAHEFA FANDRESENTSOA</h4>
-                    <p>Mathematics & Computer Science | Data Analysis | Algorithm Design</p>
-                </div>
-                <div class="footer-links">
-                    <a href="https://github.com/TifaniohMF" target="_blank" rel="noopener" title="GitHub">→ GitHub</a>
-                    <a href="mailto:randrianoelinatifanioh@gmail.com" title="Email">→ Email</a>
-                    <a href="assets/CV/CV_Tifanioh_Mahefa_Fandresentsoa_Randrianoelina_eng.pdf" download title="Download CV">→ CV</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Tifanioh Mahefa Fandresentsoa Randrianoelina | Built with precision</p>
-            </div>
-        </footer>
-    </body>
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <p class="section__label">01 — Context</p>
+      <h2 class="section__title">About</h2>
+
+      <div class="about">
+        <p class="about__lead">
+          I'm a Mathematics and Computer Science student at the University of Antananarivo,
+          based in Antananarivo, Madagascar. My current focus is
+          <strong>developing tools to solve linear systems of equations</strong> — a concrete
+          bridge between theory and code.
+        </p>
+        <p>
+          What drives me: mathematical logic, data science, data analysis, machine learning and AI.
+          Day to day, I study algebra, analysis, probability &amp; statistics, numerical computation,
+          databases and machine learning — and I like turning every new concept into a small project
+          to really understand it.
+        </p>
+
+        <blockquote class="about__quote">
+          <p>“Man evolves through learning. To achieve your goal, you need more effort and rigor.”</p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section section--surface">
+    <div class="container">
+      <p class="section__label">02 — Toolbox</p>
+      <h2 class="section__title">Skills</h2>
+
+      <div class="skills">
+        <div class="skill-card">
+          <h3>Mathematics &amp; scientific computing</h3>
+          <ul>
+            <li>Linear algebra</li>
+            <li>Numerical analysis</li>
+            <li>Probability &amp; statistics</li>
+            <li>Optimisation</li>
+            <li>Analysis</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Languages &amp; libraries</h3>
+          <ul>
+            <li>Python — NumPy, Pandas, scikit-learn, Jupyter</li>
+            <li>C / C++</li>
+            <li>LaTeX</li>
+            <li>HTML5, CSS3, JavaScript</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Environment &amp; tools</h3>
+          <ul>
+            <li>Git &amp; GitHub</li>
+            <li>Linux</li>
+            <li>Visual Studio Code</li>
+            <li>Jupyter Notebook</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS (rendered from projects.json via fetch) ===== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <p class="section__label">03 — Proofs</p>
+      <h2 class="section__title">Projects</h2>
+      <p class="section__intro">A selection of projects, from numerical solvers to LaTeX course notes.</p>
+
+      <div class="projects" id="projectsGrid">
+        <p class="projects__loading">Loading projects…</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section id="education" class="section section--surface">
+    <div class="container">
+      <p class="section__label">04 — Path</p>
+      <h2 class="section__title">Education</h2>
+
+      <div class="timeline">
+        <div class="timeline__item">
+          <span class="timeline__dot"></span>
+          <div>
+            <h3>Mathematics &amp; Computer Science</h3>
+            <p class="timeline__place">University of Antananarivo — Madagascar</p>
+            <p>Coursework spanning algebra, analysis, probability, statistics,
+              numerical computation, databases and machine learning.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section contact">
+    <div class="container contact__inner">
+      <p class="section__label">05 — Conclusion</p>
+      <h2 class="section__title">Let's work together</h2>
+      <p class="contact__text">
+        Open to conversations about scientific computing, data, or any project
+        where mathematics meets code. Feel free to reach out.
+      </p>
+      <div class="contact__actions">
+        <a href="mailto:randrianoelinatifanioh@gmail.com" class="btn btn--primary">Contact me</a>
+      </div>
+      <div class="contact__links">
+        <a href="https://github.com/TifaniohMF" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/tifanioh-mahefa-fandresentsoa-randrianoelina-205747361" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <span>© <span id="year"></span> Tifanioh Randrianoelina</span>
+    <span class="footer__sep">·</span>
+    <span>Antananarivo, Madagascar</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
 </html>
